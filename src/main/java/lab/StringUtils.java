@@ -28,9 +28,6 @@ public final class StringUtils {
         return Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
 
-    /**
-     * String-ийг урвуулж буулгах.
-     */
     public static String reverse(String s) {
         if (s == null) {
             return null;

@@ -38,49 +38,41 @@ class StringUtilsTest {
     }
 
     @Test
-    @DisplayName("isBlank - null бол true")
     void isBlank_null() {
         assertTrue(StringUtils.isBlank(null));
     }
 
     @Test
-    @DisplayName("isBlank - хоосон string бол true")
     void isBlank_empty() {
         assertTrue(StringUtils.isBlank(""));
     }
 
     @Test
-    @DisplayName("isBlank - зөвхөн space бол true")
     void isBlank_spaces() {
         assertTrue(StringUtils.isBlank("   "));
     }
 
     @Test
-    @DisplayName("isBlank - агуулгатай string бол false")
     void isBlank_notBlank() {
         assertFalse(StringUtils.isBlank("hello"));
     }
 
     @Test
-    @DisplayName("capitalize - эхний үсгийг том болгоно")
     void capitalize_simple() {
         assertEquals("Hello", StringUtils.capitalize("hello"));
     }
 
     @Test
-    @DisplayName("capitalize - том үсгийг хэвээр үлдээнэ")
     void capitalize_alreadyCapitalized() {
         assertEquals("Hello", StringUtils.capitalize("Hello"));
     }
 
     @Test
-    @DisplayName("capitalize - хоосон string-ийг хэвээр үлдээнэ")
     void capitalize_empty() {
         assertEquals("", StringUtils.capitalize(""));
     }
 
     @Test
-    @DisplayName("capitalize - null-ийг хэвээр үлдээнэ")
     void capitalize_null() {
         assertNull(StringUtils.capitalize(null));
     }
